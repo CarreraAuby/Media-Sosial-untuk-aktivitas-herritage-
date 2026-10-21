@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laweyan Bercerita – Kampanye Media Sosial Heritage Kampung Batik Laweyan</title>
+<meta name="description" content="Kampanye media sosial untuk aktivisme heritage Kampung Batik Laweyan, Surakarta, berlandaskan nilai Pancasila.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mori:#f1f3f2; --kertas:#ffffff; --wedel:#1b2a5c; --malam:#0e1631;
+  --soga:#8a4b2a; --kunyit:#e3a92b; --teks:#1c2236; --redup:#5a627a; --garis:#d5d9e2;
+  --display:'Bricolage Grotesque','Trebuchet MS',sans-serif;
+  --body:'Source Serif 4',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-size:1.08rem;line-height:1.7;color:var(--teks);background:var(--mori)}
+h1,h2,h3{font-family:var(--display);line-height:1.12;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--kunyit);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.4rem}
+section{padding:4.5rem 0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--wedel);margin-bottom:1rem;max-width:20ch}
+.lead{max-width:60ch;color:var(--redup)}
+
+/* navigasi */
+header{position:sticky;top:0;z-index:20;background:rgba(14,22,49,.94);backdrop-filter:blur(6px)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 1.4rem;max-width:1080px;margin:0 auto}
+.logo{font-family:var(--display);font-weight:800;color:#fff;text-decoration:none;font-size:1.1rem}
+.logo span{color:var(--kunyit)}
+nav ul{display:flex;gap:1.2rem;list-style:none;flex-wrap:wrap}
+nav ul a{color:#cfd5e8;text-decoration:none;font-family:var(--display);font-size:.92rem}
+nav ul a:hover{color:var(--kunyit)}
+
+/* hero */
+.hero{background:var(--malam);color:#fff;padding:4rem 0 4.5rem;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--kunyit)}
+.hero p{margin:1.3rem 0 1.8rem;color:#c3cadf;max-width:46ch}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;padding:.8rem 1.4rem;border-radius:4px;text-decoration:none;border:2px solid var(--kunyit);background:var(--kunyit);color:var(--malam);cursor:pointer;font-size:1rem}
+.btn:hover{background:transparent;color:var(--kunyit)}
+.btn.ghost{background:transparent;color:#fff;border-color:#4a5686;margin-left:.6rem}
+.btn.ghost:hover{border-color:#fff}
+.kain{width:100%;max-width:440px;margin:0 auto;display:block}
+.kain .garis{fill:none;stroke:var(--kunyit);stroke-width:1.6;stroke-dasharray:420;stroke-dashoffset:420;animation:canting 3.2s ease forwards}
+.kain .garis.b{stroke:#8fa2ee;animation-delay:.6s}
+@keyframes canting{to{stroke-dashoffset:0}}
+.kain-cap{font-size:.85rem;color:#8d97bb;text-align:center;margin-top:.6rem;font-style:italic}
+
+/* masalah */
+.dua{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.banding{border-left:4px solid var(--soga);padding-left:1.2rem;margin-bottom:1.4rem}
+.banding strong{font-family:var(--display);color:var(--soga);display:block;margin-bottom:.2rem}
+.pull{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--wedel);line-height:1.25}
+
+/* pancasila */
+.sila{background:var(--wedel);color:#fff}
+.sila h2{color:#fff}.sila .lead{color:#b9c1df}
+.sila details{border-top:1px solid #3b4a85;padding:1rem 0}
+.sila details:last-child{border-bottom:1px solid #3b4a85}
+.sila summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.15rem;list-style:none;display:flex;gap:1rem;align-items:baseline}
+.sila summary::-webkit-details-marker{display:none}
+.sila summary b{color:var(--kunyit);min-width:1.6rem}
+.sila summary::after{content:"+";margin-left:auto;color:var(--kunyit);font-size:1.4rem}
+.sila details[open] summary::after{content:"–"}
+.sila details p{margin:.7rem 0 0 2.6rem;color:#d3d9ee;max-width:62ch}
+
+/* objek */
+.objek{display:grid;gap:0;border-top:2px solid var(--wedel)}
+.baris{display:grid;grid-template-columns:200px 1fr;gap:1.5rem;padding:1.3rem 0;border-bottom:1px solid var(--garis)}
+.baris h3{font-size:1.2rem;color:var(--wedel)}
+.baris p{color:var(--teks)}
+.baris small{display:block;margin-top:.4rem;color:var(--soga);font-family:var(--display);font-size:.88rem}
+.catatan{margin-top:1.2rem;font-size:.92rem;color:var(--redup);font-style:italic}
+
+/* strategi */
+.strategi{background:var(--kertas)}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin:1.5rem 0 0}
+.tab{font-family:var(--display);font-weight:700;font-size:.95rem;padding:.6rem 1.1rem;border:2px solid var(--wedel);background:transparent;color:var(--wedel);cursor:pointer;border-radius:4px 4px 0 0}
+.tab[aria-selected="true"]{background:var(--wedel);color:#fff}
+.panel{border:2px solid var(--wedel);padding:1.8rem;display:grid;grid-template-columns:1.2fr 1fr;gap:2rem}
+.panel[hidden]{display:none}
+.panel h3{font-size:1.5rem;color:var(--wedel);margin-bottom:.5rem}
+.panel dl{margin-top:1rem}
+.panel dt{font-family:var(--display);font-weight:700;color:var(--soga);font-size:.95rem}
+.panel dd{margin-bottom:.7rem}
+.contoh{background:var(--mori);padding:1.2rem;border-left:4px solid var(--kunyit);font-size:.98rem;align-self:start}
+.contoh b{font-family:var(--display);display:block;margin-bottom:.4rem;color:var(--wedel)}
+.gen{margin-top:2.5rem;padding:1.6rem;background:var(--mori);border:1px dashed var(--wedel)}
+.gen h3{color:var(--wedel);margin-bottom:.8rem}
+.gen .f{display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:1rem}
+label{font-family:var(--display);font-weight:700;font-size:.9rem;display:block;margin-bottom:.25rem;color:var(--wedel)}
+input,select,textarea{font:inherit;width:100%;padding:.6rem .75rem;border:2px solid var(--garis);border-radius:4px;background:#fff;color:var(--teks)}
+input:focus,select:focus,textarea:focus{border-color:var(--wedel)}
+.f>div{flex:1 1 200px}
+#hasilCaption{white-space:pre-wrap;background:#fff;padding:1rem;border:2px solid var(--garis);min-height:4.5rem;margin-bottom:.8rem}
+
+/* etika */
+.cek{list-style:none;max-width:700px;margin-top:1.5rem}
+.cek li{border-bottom:1px solid var(--garis)}
+.cek label{display:flex;gap:.8rem;align-items:flex-start;padding:.9rem 0;font-family:var(--body);font-weight:400;font-size:1.05rem;color:var(--teks);cursor:pointer;margin:0}
+.cek input{width:1.25rem;height:1.25rem;margin-top:.3rem;accent-color:var(--wedel);flex:none}
+.cek input:checked+span{color:var(--redup);text-decoration:line-through}
+.prog{margin-top:1.4rem;max-width:700px}
+.bar{height:10px;background:var(--garis);border-radius:5px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--soga);transition:width .35s}
+#statusCek{margin-top:.6rem;font-family:var(--display);font-weight:700;color:var(--wedel)}
+
+/* cerita */
+.cerita{background:var(--kertas)}
+.grid2{display:grid;grid-template-columns:1fr 1.2fr;gap:2.5rem;align-items:start;margin-top:1.5rem}
+form .row{margin-bottom:1rem}
+.filter{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1rem}
+.chip{font-family:var(--display);font-size:.88rem;font-weight:700;padding:.35rem .8rem;border:2px solid var(--wedel);background:transparent;color:var(--wedel);border-radius:99px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--wedel);color:#fff}
+.post{border:1px solid var(--garis);padding:1rem 1.1rem;margin-bottom:.9rem;background:var(--mori)}
+.post header{position:static;background:none;display:flex;justify-content:space-between;gap:1rem;font-family:var(--display);font-size:.88rem;color:var(--redup);margin-bottom:.4rem}
+.post header b{color:var(--wedel)}
+.post .like{margin-top:.6rem;font-family:var(--display);font-weight:700;font-size:.88rem;border:0;background:none;color:var(--soga);cursor:pointer}
+.kosong{color:var(--redup);font-style:italic}
+
+footer{background:var(--malam);color:#9aa4c8;padding:2.5rem 0;font-size:.92rem}
+footer strong{color:#fff;font-family:var(--display)}
+
+@media(max-width:820px){
+  .hero .wrap,.dua,.panel,.grid2{grid-template-columns:1fr}
+  .baris{grid-template-columns:1fr;gap:.3rem}
+  nav ul{display:none}
+  .btn.ghost{margin:.6rem 0 0}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .kain .garis{animation:none;stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav aria-label="Navigasi utama">
+    <a class="logo" href="#atas">Laweyan <span>Bercerita</span></a>
+    <ul>
+      <li><a href="#masalah">Masalah</a></li>
+      <li><a href="#pancasila">Pancasila</a></li>
+      <li><a href="#objek">Objek heritage</a></li>
+      <li><a href="#kampanye">Kampanye</a></li>
+      <li><a href="#etika">Etika konten</a></li>
+      <li><a href="#cerita">Cerita warga</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="atas">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Laweyan bukan latar foto. Ia <em>kampung yang masih bekerja.</em></h1>
+      <p>Kampanye media sosial untuk menjaga Kampung Batik Laweyan, Surakarta: mengajak orang peduli dan bergotong royong, bukan sekadar mengejar konten viral.</p>
+      <a class="btn" href="#kampanye">Lihat rencana kampanye</a>
+      <a class="btn ghost" href="#cerita">Kirim cerita</a>
+    </div>
+    <div>
+      <svg class="kain" viewBox="0 0 400 400" role="img" aria-label="Motif kawung yang tergambar perlahan seperti ditulis dengan canting">
+        <g class="garis">
+          <ellipse cx="100" cy="100" rx="40" ry="80" transform="rotate(0 100 100)"/>
+          <ellipse cx="100" cy="100" rx="80" ry="40"/>
+          <ellipse cx="300" cy="100" rx="40" ry="80"/>
+          <ellipse cx="300" cy="100" rx="80" ry="40"/>
+        </g>
+        <g class="garis b">
+          <ellipse cx="100" cy="300" rx="40" ry="80"/>
+          <ellipse cx="100" cy="300" rx="80" ry="40"/>
+          <ellipse cx="300" cy="300" rx="40" ry="80"/>
+          <ellipse cx="300" cy="300" rx="80" ry="40"/>
+          <ellipse cx="200" cy="200" rx="40" ry="80"/>
+          <ellipse cx="200" cy="200" rx="80" ry="40"/>
+        </g>
+        <g fill="#e3a92b"><circle cx="200" cy="200" r="5"/><circle cx="100" cy="100" r="4"/><circle cx="300" cy="100" r="4"/><circle cx="100" cy="300" r="4"/><circle cx="300" cy="300" r="4"/></g>
+      </svg>
+      <p class="kain-cap">Motif kawung, digambar garis demi garis seperti canting menulis lilin.</p>
+    </div>
+  </div>
+</section>
+
+<section id="masalah">
+  <div class="wrap dua">
+    <div>
+      <h2>Viral itu cepat. Warisan itu lama.</h2>
+      <p class="lead">Kampung batik ramai dikunjungi karena foto yang cantik. Tetapi satu video yang ramai belum tentu membuat orang paham siapa yang membuat kainnya, bagaimana prosesnya, dan siapa yang menjaga kampungnya.</p>
+    </div>
+    <div>
+      <div class="banding"><strong>Pertanyaan proyek</strong>Bagaimana promosi digital dapat membangun kepedulian dan gotong royong tanpa mereduksi heritage menjadi konten viral semata?</div>
+      <p class="pull">Jawaban kami: setiap unggahan harus menambah pemahaman, memberi kredit pada warga, dan membuka jalan untuk ikut menjaga.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sila" id="pancasila">
+  <div class="wrap">
+    <h2>Lima sila sebagai aturan main kampanye</h2>
+    <p class="lead" style="margin-bottom:1.8rem">Setiap sila diterjemahkan menjadi kebiasaan konkret saat membuat dan mengunggah konten heritage.</p>
+    <details open><summary><b>1</b>Ketuhanan Yang Maha Esa</summary><p>Hormati ruang ibadah dan makam di Laweyan. Jangan memotret orang yang sedang beribadah, jangan menjadikan tempat sakral sebagai properti konten, dan patuhi aturan pengelola.</p></details>
+    <details><summary><b>2</b>Kemanusiaan yang adil dan beradab</summary><p>Minta izin sebelum merekam warga dan pengrajin. Sebut nama dan peran mereka. Pembatik adalah pelaku utama cerita, bukan objek foto.</p></details>
+    <details><summary><b>3</b>Persatuan Indonesia</summary><p>Rangkul lintas generasi dan lintas latar: pembatik senior, pemuda kampung, mahasiswa, dan pengunjung dari luar kota. Gunakan bahasa yang mengajak, bukan menggurui.</p></details>
+    <details><summary><b>4</b>Kerakyatan yang dipimpin oleh hikmat kebijaksanaan</summary><p>Warga ikut menentukan cerita apa yang layak dibagikan. Draf konten penting dibacakan dulu kepada pelaku di kampung sebelum tayang.</p></details>
+    <details><summary><b>5</b>Keadilan sosial bagi seluruh rakyat Indonesia</summary><p>Setiap kampanye menyertakan cara mendukung langsung pengrajin dan UMKM kampung, misalnya tautan atau alamat sanggar, agar manfaat ekonomi kembali ke warga.</p></details>
+  </div>
+</section>
+
+<section id="objek">
+  <div class="wrap">
+    <h2>Apa yang diangkat dari Laweyan</h2>
+    <p class="lead" style="margin-bottom:1.8rem">Objek heritage yang menjadi bahan cerita kampanye. Fokusnya pada hal yang bisa dijelaskan, bukan hanya difoto.</p>
+    <div class="objek">
+      <div class="baris"><h3>Rumah saudagar batik</h3><div><p>Rumah-rumah besar berarsitektur campuran Jawa dan Eropa, dibangun oleh para juragan batik pada masa kejayaan perdagangan batik awal abad ke-20.</p><small>Sudut cerita: sejarah keluarga dan arsitektur</small></div></div>
+      <div class="baris"><h3>Lorong kampung</h3><div><p>Gang sempit berdinding tinggi yang menjadi ciri kampung ini. Dahulu dinding itu melindungi usaha dan rumah para saudagar.</p><small>Sudut cerita: tata ruang dan kehidupan sehari-hari</small></div></div>
+      <div class="baris"><h3>Proses membatik</h3><div><p>Dari mencanting, mewarna, hingga melorod lilin. Setiap tahap memiliki keahlian tersendiri dan dikerjakan oleh orang yang berbeda.</p><small>Sudut cerita: keterampilan dan regenerasi pembatik</small></div></div>
+      <div class="baris"><h3>Masjid Laweyan</h3><div><p>Salah satu masjid tertua di Surakarta, dikaitkan dengan masa Kerajaan Pajang. Tempat ibadah yang masih hidup, bukan sekadar lokasi foto.</p><small>Sudut cerita: sejarah dengan sikap hormat</small></div></div>
+      <div class="baris"><h3>Sanggar dan UMKM</h3><div><p>Galeri, sanggar, dan usaha kecil yang menjual serta mengajarkan batik. Inilah tempat dukungan nyata dapat diberikan.</p><small>Sudut cerita: ekonomi warga</small></div></div>
+    </div>
+    <p class="catatan">Catatan: data sejarah di atas bersifat ringkas. Verifikasi dengan sumber resmi dan wawancara warga sebelum dipakai sebagai konten.</p>
+  </div>
+</section>
+
+<section class="strategi" id="kampanye">
+  <div class="wrap">
+    <h2>Satu cerita, lima kanal</h2>
+    <p class="lead">Setiap platform punya tugas berbeda. Pilih kanal untuk melihat format, tujuan, dan contoh unggahannya.</p>
+    <div class="tabs" role="tablist" aria-label="Pilih platform" id="tabs"></div>
+    <div id="panels"></div>
+
+    <div class="gen">
+      <h3>Pembuat caption berbasis etika</h3>
+      <div class="f">
+        <div><label for="gTema">Objek yang diangkat</label>
+          <select id="gTema"><option>rumah saudagar batik</option><option>proses mencanting</option><option>lorong kampung</option><option>Masjid Laweyan</option><option>sanggar batik</option></select></div>
+        <div><label for="gNama">Nama narasumber (wajib dikredit)</label><input id="gNama" placeholder="mis. Bu Sri, pembatik"></div>
+        <div><label for="gAjak">Ajakan aksi</label>
+          <select id="gAjak"><option>Beli langsung dari pengrajin Laweyan</option><option>Ikut kelas membatik di sanggar</option><option>Bagikan cerita ini ke teman yang peduli budaya</option><option>Kunjungi dengan sopan dan hormati warga</option></select></div>
+      </div>
+      <button class="btn" id="btnGen" type="button" style="color:var(--malam)">Buat caption</button>
+      <div id="hasilCaption" aria-live="polite" style="margin-top:1rem">Isi nama narasumber lalu tekan tombol.</div>
+      <button class="btn" id="btnSalin" type="button" style="background:var(--wedel);border-color:var(--wedel);color:#fff">Salin caption</button>
+    </div>
+  </div>
+</section>
+
+<section id="etika">
+  <div class="wrap">
+    <h2>Periksa sebelum mengunggah</h2>
+    <p class="lead">Daftar periksa singkat agar konten tetap menghormati warga dan nilai heritage. Konten siap tayang jika semua terpenuhi.</p>
+    <ul class="cek" id="cek"></ul>
+    <div class="prog"><div class="bar"><i id="barCek"></i></div><p id="statusCek"></p></div>
+  </div>
+</section>
+
+<section class="cerita" id="cerita">
+  <div class="wrap">
+    <h2>Cerita dari warga dan pengunjung</h2>
+    <p class="lead">Bagikan pengalamanmu tentang Laweyan. Cerita yang masuk tampil di bawah ini (disimpan di peramban kamu).</p>
+    <div class="grid2">
+      <form id="formCerita">
+        <div class="row"><label for="cNama">Nama</label><input id="cNama" required maxlength="40"></div>
+        <div class="row"><label for="cPlat">Platform asal cerita</label>
+          <select id="cPlat"><option>Instagram</option><option>TikTok</option><option>YouTube</option><option>Podcast</option></select></div>
+        <div class="row"><label for="cIsi">Ceritamu</label><textarea id="cIsi" rows="5" required maxlength="400" placeholder="Apa yang kamu pelajari atau rasakan di Laweyan?"></textarea></div>
+        <button class="btn" type="submit" style="color:var(--malam)">Kirim cerita</button>
+      </form>
+      <div>
+        <div class="filter" id="filter" role="group" aria-label="Filter platform"></div>
+        <div id="feed" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Laweyan Bercerita</strong> – Tugas Berbasis Proyek, Pendidikan Pancasila, Program Studi Informatika. Tema 5: Media sosial untuk aktivisme heritage.</p>
+    <p style="margin-top:.5rem">Luaran: kampanye media sosial. Isi sejarah perlu diverifikasi dengan sumber resmi sebelum dikumpulkan.</p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Data kampanye ---------- */
+const PLATFORM = [
+  {id:'Instagram', judul:'Carousel "Satu kain, tujuh tangan"', tujuan:'Mengedukasi tahapan membatik secara berurutan dan mengenalkan siapa pelakunya.', format:'Carousel 7 slide, foto asli dari kampung, teks singkat per slide.', sila:'Sila 2 dan 5: pelaku dikredit, ada tautan ke sanggar.', contoh:'"Kain ini dikerjakan oleh tujuh orang berbeda. Geser untuk berkenalan dengan mereka. Foto dan cerita dibagikan atas izin para pembatik Laweyan."'},
+  {id:'Reels', judul:'Reels "60 detik di meja canting"', tujuan:'Menunjukkan keahlian tangan secara dekat agar penonton menghargai proses, bukan hanya hasil.', format:'Video vertikal 30–60 detik, suara asli canting dan wawancara singkat.', sila:'Sila 2 dan 3: menghormati pembatik, mengajak lintas generasi.', contoh:'"Satu garis lilin tidak bisa diulang. Lihat bagaimana Bu Sri menjaga tangannya tetap tenang. Mau coba sendiri? Kelasnya ada di akhir video."'},
+  {id:'TikTok', judul:'Seri "Tanya Pembatik"', tujuan:'Menjawab pertanyaan penonton muda dengan bahasa santai, melawan mitos dan informasi keliru tentang batik.', format:'Video tanya jawab 30–45 detik, penonton bertanya lewat komentar.', sila:'Sila 4: warga dan penonton sama-sama menentukan topik.', contoh:'"Apa bedanya batik tulis dan batik printing? Pak Joko jawab langsung. Kirim pertanyaanmu di kolom komentar."'},
+  {id:'YouTube', judul:'Mini dokumenter "Lorong Laweyan"', tujuan:'Menceritakan sejarah kampung dan saudagar batik secara utuh dalam satu tontonan.', format:'Video 5–7 menit, narasi dari warga, subtitle bahasa Indonesia dan Inggris.', sila:'Sila 1 dan 3: sejarah ditampilkan dengan hormat dan inklusif.', contoh:'"Dari lorong sempit ini, para saudagar membangun usaha batik. Tonton kisahnya dan tinggalkan cerita keluargamu di kolom komentar."'},
+  {id:'Podcast', judul:'Podcast "Cerita Saudagar"', tujuan:'Merekam kisah lisan generasi tua sebelum hilang, dalam bentuk percakapan panjang.', format:'Audio 15–20 menit per episode, satu narasumber, tanpa naskah kaku.', sila:'Sila 4 dan 5: warga memegang kendali cerita, hasil dibagikan kembali ke kampung.', contoh:'"Episode ini bersama Pak Harno yang tumbuh di antara gudang kain. Dengarkan, lalu ceritakan siapa pembatik di keluargamu."'}
+];
+const CEK = [
+  'Saya sudah mendapat izin dari orang yang tampil di foto atau video.',
+  'Nama dan peran narasumber dicantumkan dengan benar.',
+  'Fakta sejarah sudah dicek ke sumber resmi atau warga.',
+  'Tidak ada orang yang sedang beribadah atau tempat sakral yang dijadikan latar gaya-gayaan.',
+  'Ada ajakan yang bermanfaat bagi warga, misalnya membeli langsung atau ikut kelas.',
+  'Narasi tidak menyebut batik atau Laweyan sebagai milik pribadi atau mengklaim hal yang tidak benar.',
+  'Warga sudah melihat draf konten sebelum tayang.'
+];
+const FEED0 = [
+  {n:'Dita', p:'Instagram', t:'Baru tahu satu kain batik dikerjakan banyak orang. Sekarang saya selalu menyebut nama pembatiknya.', l:12},
+  {n:'Rangga', p:'TikTok', t:'Lorong sempit Laweyan ternyata punya alasan sejarah. Saya ingin tahu lebih banyak.', l:8},
+  {n:'Bu Tini', p:'Podcast', t:'Senang cerita masa muda dulu bisa direkam anak-anak muda.', l:15}
+];
+const $ = s => document.querySelector(s);
+
+/* ---------- Tab platform ---------- */
+const tabs = $('#tabs'), panels = $('#panels');
+PLATFORM.forEach((x,i)=>{
+  const b = document.createElement('button');
+  b.className='tab'; b.role='tab'; b.id='tab-'+i; b.textContent=x.id;
+  b.setAttribute('aria-selected', i===0); b.setAttribute('aria-controls','pan-'+i);
+  b.onclick=()=>pilih(i); tabs.appendChild(b);
+  const p = document.createElement('div');
+  p.className='panel'; p.id='pan-'+i; p.role='tabpanel'; p.hidden = i!==0;
+  p.innerHTML = `<div><h3>${x.judul}</h3><dl>
+    <dt>Tujuan</dt><dd>${x.tujuan}</dd>
+    <dt>Format</dt><dd>${x.format}</dd>
+    <dt>Kaitan Pancasila</dt><dd>${x.sila}</dd></dl></div>
+    <div class="contoh"><b>Contoh caption</b>${x.contoh}</div>`;
+  panels.appendChild(p);
+});
+function pilih(i){
+  PLATFORM.forEach((_,k)=>{
+    $('#tab-'+k).setAttribute('aria-selected', k===i);
+    $('#pan-'+k).hidden = k!==i;
+  });
+}
+
+/* ---------- Generator caption ---------- */
+function bikinCaption(){
+  const nama = $('#gNama').value.trim();
+  const out = $('#hasilCaption');
+  if(!nama){ out.textContent='Nama narasumber belum diisi. Kredit pada pelaku adalah syarat caption ini.'; return; }
+  out.textContent = `Cerita ${$('#gTema').value} di Kampung Batik Laweyan, Surakarta, bersama ${nama}. Foto dan kisah ini dibagikan atas izin beliau.\n\n${$('#gAjak').value}.\n\n#LaweyanBercerita #KampungBatikLaweyan #BatikSolo #HeritageSolo`;
+}
+$('#btnGen').onclick = bikinCaption;
+$('#btnSalin').onclick = async ()=>{
+  const t = $('#hasilCaption').textContent;
+  try{ await navigator.clipboard.writeText(t); $('#btnSalin').textContent='Tersalin'; }
+  catch(e){ $('#btnSalin').textContent='Salin manual dari kotak'; }
+  setTimeout(()=>$('#btnSalin').textContent='Salin caption',1800);
+};
+
+/* ---------- Daftar periksa etika ---------- */
+const ul = $('#cek');
+CEK.forEach((t,i)=>{
+  const li = document.createElement('li');
+  li.innerHTML = `<label><input type="checkbox" data-i="${i}"><span>${t}</span></label>`;
+  ul.appendChild(li);
+});
+function hitung(){
+  const semua = ul.querySelectorAll('input'), ok = ul.querySelectorAll('input:checked').length;
+  $('#barCek').style.width = (ok/semua.length*100)+'%';
+  $('#statusCek').textContent = ok===semua.length
+    ? 'Semua terpenuhi. Konten siap tayang.'
+    : `${ok} dari ${semua.length} terpenuhi. Lengkapi sebelum tayang.`;
+}
+ul.addEventListener('change', hitung); hitung();
+
+/* ---------- Cerita warga ---------- */
+let feed = FEED0.slice(), aktif = 'Semua';
+try{
+  const s = localStorage.getItem('laweyan-feed');
+  if(s) feed = JSON.parse(s);
+}catch(e){}
+function simpan(){ try{ localStorage.setItem('laweyan-feed', JSON.stringify(feed)); }catch(e){} }
+const esc = s => s.replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const fl = $('#filter');
+['Semua','Instagram','TikTok','YouTube','Podcast'].forEach(n=>{
+  const b = document.createElement('button');
+  b.className='chip'; b.type='button'; b.textContent=n; b.setAttribute('aria-pressed', n==='Semua');
+  b.onclick=()=>{ aktif=n; fl.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed', c.textContent===n)); gambar(); };
+  fl.appendChild(b);
+});
+function gambar(){
+  const el = $('#feed'); el.innerHTML='';
+  const daftar = feed.filter(x=>aktif==='Semua'||x.p===aktif);
+  if(!daftar.length){ el.innerHTML='<p class="kosong">Belum ada cerita untuk platform ini. Jadilah yang pertama menulis.</p>'; return; }
+  daftar.forEach(x=>{
+    const d = document.createElement('article'); d.className='post';
+    d.innerHTML = `<header><b>${esc(x.n)}</b><span>${esc(x.p)}</span></header><p>${esc(x.t)}</p>
+      <button class="like" type="button">Dukung (${x.l})</button>`;
+    d.querySelector('.like').onclick=()=>{ x.l++; simpan(); gambar(); };
+    el.appendChild(d);
+  });
+}
+$('#formCerita').addEventListener('submit', e=>{
+  e.preventDefault();
+  feed.unshift({n:$('#cNama').value.trim(), p:$('#cPlat').value, t:$('#cIsi').value.trim(), l:0});
+  simpan(); e.target.reset(); gambar();
+});
+gambar();
+</script>
+</body>
+</html>
