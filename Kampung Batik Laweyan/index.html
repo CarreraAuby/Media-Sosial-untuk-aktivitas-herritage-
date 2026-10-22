@@ -321,6 +321,7 @@ footer strong{color:#fff;font-family:var(--display)}
 </footer>
 
 <script>
+const $ = s => document.querySelector(s);
 /* ---------- Galeri ---------- */
 const lb=$('#lb');
 document.querySelectorAll('.foto button').forEach(b=>b.onclick=()=>{
@@ -351,7 +352,6 @@ const FEED0 = [
   {n:'Rangga', p:'TikTok', t:'Lorong sempit Kauman ternyata punya alasan sejarah. Saya ingin tahu lebih banyak.', l:8},
   {n:'Bu Tini', p:'Podcast', t:'Senang cerita masa muda dulu bisa direkam anak-anak muda.', l:15}
 ];
-const $ = s => document.querySelector(s);
 
 /* ---------- Tab platform ---------- */
 const tabs = $('#tabs'), panels = $('#panels');
